@@ -1,0 +1,152 @@
+/*For targeting more element having more than one classes
+1. Element Selector
+nav {
+    color:crimson;
+    align-content:flex-start;
+}
+
+2. Universal Selectors
+This indicates that the following styles are applied for all elements in webpage(HTML Page)
+* {
+    background-color: white;
+}
+
+3. Class Selectors
+/*This is applying CSS using class
+.Nav-Bar{
+    color: black
+}
+
+4. Id Selectors
+/*This is applying CSS using id
+#nav-bar{
+    background-color: yellow;
+}
+/*If not specified id (or) class using directly element name then it applies for all elements in the webapp(HTML Page)
+*/
+
+/*List Selectors*/
+.Home.Page, #Sample {
+    color:lavender;
+    border: 4px dotted;
+    border-color: black;
+}
+
+/*This denotes the attribute selectors*/
+/*
+1. [attr] ---> Matches with the element having the same attribute name
+li[class] {
+    background: yellow;
+}
+
+2. [attr=value] ----> Matches with the element having same attribute & value
+li[class="Basics"] {
+    color: black
+}
+
+3. [attr=~value]  ----> Matches with the element having same attribute (or) having a value in the attribute value separated by space
+li[class~="Basics"] {
+    align-content: bottom;
+}
+
+4. [attr|=value]  ----> Matches with the element having the same attribute (or) having a value in the 
+attribute starting with it followed by hyphen('-')
+li[class|="Basics"] {
+    align-content: bottom;
+}
+*/
+
+
+/*These denotes Substring Matching Selectors*/
+/*
+1. [attr^=value] -----> Matches elements with an attr attribute, whose value begins with value.
+li[class^="box"] {
+}
+
+2. [attr$=value] -----> Matches elements with an attr attribute whose value ends with value.
+li[class$="-box"] {
+}
+
+3. [attr*=value] ----> Matches elements with an attr attribute whose value contains this value anywhere within the string.
+li[class*="box"] {
+}
+*/
+
+
+/*Psuedo Classes Selectors*/
+/*  It is used to style elements when they are in a particular state
+1. :first-child ------> Used to provide styling for only first child(any element first in it) of the element
+section:first-child {
+    color:aqua
+}
+
+2. :hover  -----> Used to enable styling when hover over elements
+h2:hover[id="Sample_Article"]{
+    background-color: aqua;
+}
+
+3. :link  -----> Used to style unvisited link
+a: link[id="Sample_link"]{
+    background-color: red;
+}
+
+4. :visited  -----> Used to style visited link
+a: link[id="Sample_link"] {
+}
+
+5.  :focus  ----> Used to style an input field
+input:focus[id="Email"] {
+}
+
+6. :active  -----> Used to style an active link
+a: active[id="Sample_link"] {
+}
+*/
+
+
+/*Pseudo Elements*/
+/*  It allows us to style a specfic part of an element as if like wrapping it with a span and styling like want first line which can be different according to the browsers.
+1. ::first-line ------> Used to style first line and dynamically adjust according to the viewport
+p::first-line {
+}
+
+2. ::first-letter ------> Used to style the first letter of the element
+
+3. ::selection -----> Allows to style content when selected by user
+
+4. ::marker ----> Used to style marking(ordering/listing) elements like
+li::marker {
+    color: cornflowerblue;
+    content: '<> ';
+    font-size: 1.1em;
+}
+Output:-
+    <> Based on the marking element it is done
+
+5. ::before & ::after -----> Used to add & style content before and after an element
+*/
+
+
+/* Combining Pseudo-Elements & Pseudo-Classes
+article p:first-child::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+*/
+
+
+/*Combinators
+    This is used to combine selectors with other selectors, it used to select elements based on their location relative to other elements.
+1. Descendent Combinator ----> It is a space separated selector used to select elements based on their ancestors.
+body main section p {
+}
+Output:- p element of section element of main element of body element is selected for styling
+
+2.  Child Combinator ----> Similar to descendent combinator uses '>' separation but supports only direct ancestor.
+article > p {
+}
+
+3. Next-Sibling Combinator ----> It is a '+' separated selector used to style all elements that is matched by the first selector and immediately after the second selector.
+ul + l1 {
+}
+*/

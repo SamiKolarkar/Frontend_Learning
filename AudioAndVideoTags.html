@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video controls
+    muted
+    autoplay
+    loop
+    poster=""
+    preload="none/auto/metadata"
+    height=""
+    width="">
+        <source src="" type="mp4,etc.">
+        <track label="Description for sample video" src="captions.vtt" kind="descriptions/subtitles/captions/metadata/chapters" srclang="en/es/etc."></track>
+    </video>
+    <audio controls>
+        <source src="" type="mp3,etc.">
+        <track label="Description for sample video" src="captions.vtt" kind="descriptions/subtitles/captions/metadata/chapters" srclang="en/es/etc."></track>
+    </audio>
+    <!-- Enables use rating media -->
+    <div>
+        <label for="rating">Rating</label>
+        <input type="range" min="1" max="5" id="rating" name="rating" list="ratings">
+        <datalist id="ratings">
+            <option value="1" label="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5" label="5"></option>
+        </datalist>
+    </div>
+</body>
+</html>

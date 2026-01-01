@@ -1,0 +1,20 @@
+nav {
+    color:crimson;
+    align-content:flex-start;
+}
+
+/*This indicates that the following styles are applied for all elements in webpage(HTML Page)*/
+* {
+    background-color: white;
+}
+
+/*This is applying CSS using class*/
+.Nav-Bar{
+    color: black
+}
+
+/*This is applying CSS using id*/
+#nav-bar{
+    background-color: yellow;
+}
+/*If not specified id (or) class using directly element name then it applies for all elements in the webapp(HTML Page)*/

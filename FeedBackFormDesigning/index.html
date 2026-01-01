@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Forms challenge</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <main>
+        <h1>We want your feedback!</h1>
+
+        <p>
+            We're very excited that you visited the <a href="#">little house in the woods</a>,
+            and we want to hear what you thought of it! Please fill in the below
+            sections. You don't need to provide your name or contact details, but
+            if you do, we'll enter you into a <a href="#">prize draw</a> where you'll have a chance
+            to win prizes.
+        </p>
+
+        <img src="sample.png"/>
+        
+        <form action="#" method="post">
+            <h2>Facilities</h2>
+            <fieldset>
+                <legend>Was the porridge</legend>
+                <div class="porridge">
+                    <input type="radio" name="porridge" disabled/>
+                    <label for="hotChoice">Too hot?</label>
+                    <input type="radio" name="porridge"/>
+                    <label for="coldChoice">Too cold?</label>
+                    <input type="radio" name="porridge"/>
+                    <label for="satisfiedChoice">Just right.</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Was the beds</legend>
+                <div class="beds">
+                    <input type="radio" name="porridge"/>
+                    <label for="hardChoice">Too hard?</label>
+                    <input type="radio" name="porridge"/>
+                    <label for="softChoice">Too soft?</label>
+                    <input type="radio" name="porridge"/>
+                    <label for="satisfiedChoice">Just right.</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Describe the chairs (select all you agree with)</legend>
+                <div class="chairDescription">
+                    <input type="checkbox" name="Comfy" checked/>
+                    <label for="comfy">Comfy</label>
+                    <input type="checkbox" name="Luxurious"/>
+                    <label for="luxurious">Luxurious</label>
+                    <input type="checkbox" name="Hi tec"/>
+                    <label for="hiTech">Hi tech</label>
+                    <input type="checkbox" name="Majestic"/>
+                    <label for="majestic">Majestic</label>
+                </div>
+            </fieldset>
+
+            <h2>About your hosts</h2>
+            <fieldset>
+                <div class="hostsDetails">
+                    <label for="favoriteBear">Who's your favorite bear?</label>
+                    <select name="favoriteBear">
+                        <option value="Papa bear">Papa bear</option>
+                        <option value="Mama bear">Mama bear</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Dozer">Dozer</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <div class="hostsDetails">
+                    <label for="greetingprefer">Which greeting did you prefer?</label>
+                    <select name="greetingprefer">
+                        <option value="Wave">Wave</option>
+                        <option value="Friendly greeting">Friendly greeting</option>
+                        <option value="Growl">Growl</option>
+                        <option value="Claw marks in the door">Claw marks in the door</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <h2>Any other feedback?</h2>
+            <fieldset>
+                <legend>Give us your comments</legend>
+                <textarea name="comments" row="5" col="23"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your details</legend>
+                <div class="details">
+                    <label for="Name">Name </label><input type="text" name="Name" id="Name" required/><br>
+                    <label for="Name">Email </label><input type="text" name="Email" id="Email"/><br>
+                    <label for="Name">Phone </label><input type="text" name="Phone" id="Phone"/><br>
+                </div>
+            </fieldset>
+
+            <button type="Submit">Submit</button>
+        </form>
+
+    </main>
+  </body>
+</html>
