@@ -149,4 +149,76 @@ article > p {
 3. Next-Sibling Combinator ----> It is a '+' separated selector used to style all elements that is matched by the first selector and immediately after the second selector.
 ul + l1 {
 }
+
+4. Subsequent-Sibling Combinator ----> It is '~' separated selector used to style all elements matching second selector even though not directly after the first selector
+h2 ~ p{
+}
+*/
+
+
+/*Combining Combinators with Selectors
+ul > li[class="a"] {
+}
+*/
+
+
+/*Box
+    In HTML, every element is treated as wrapped around by a rectangular box by the browser.
+    As these boxes can an inline box which does not adjusts its surronding elements content while styling and overlaps them as well as not breaks on new line, while the block box is does it.
+    It is set using 'display' attribute, while some elements are by default set
+    
+    .Sample {
+        display=inline/block;
+    }
+
+    There's a hybrid version called 'inline-block' which supports default features of inline if something has changed then changes like block.
+*/
+
+
+/*Box Models 
+    It allows us to style the block boxes as everything in css is represented as a box & same attributes can be supported for inline boxes.*/
+/*  1. Standard Box Model ----> What ever size chnages me make to content box is free of padding.*/
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
+
+/*  2. Altrenate Box Model ------> Size changes made to content box must be kept in mind with padding*/
+.alternate {
+  box-sizing: border-box;
+}
+
+.alternate {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 390px;
+  height: 240px;
+}
+
+/*  It has various properties like:- */
+/*      1. Margin ------> margin-top, margin-bottom, margin-left, margin-right (all take px/em values)
+                          (If negative values are given then the content box moves out of the border)
+
+        2. Borders -------> It also has same sizing & positioning contents like border-top, border-right, border-bottom, border-left with styling contents like border-width, border-style, border-color & we can combine both to style & size specific parts like top,bottom, etc.
+
+        3. Padding -------> Similar to margin contents like padding-top, padding-right, padding-bottom, padding-left
+*/
+
+
+/*Inheritance
+    In CSS, an element does not always need to have styles defined explicitly.
+    If a property is inheritable, and the element does not define it, the browser inherits that property value from the parent element.This mechanism is called inheritance in CSS.
+    Inheritance applies only to certain properties, such as text-related properties, and does not apply to layout-related properties unless explicitly specified.
+    An inherited value can always be overridden by the child element by defining its own value.
+    
+    p {
+        all;
+        background-color: yellow;
+    }
 */

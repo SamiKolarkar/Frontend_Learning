@@ -1,0 +1,15 @@
+/*List Styling
+    It is used to style lists like ol, ul, dl, etc.
+    1. list-style-type -----> Used to determine the style of bullets.
+
+    2. list-style-image:url("source") -----> It uses an image instead of bullets.
+
+    3. list-style-position -----> Used to position the list bullets whether as continous text inside the list content or outside it.
+*/
+
+/*Link Styling
+    It allows us to style links and supports styling through pseudo classes & elements.It also provides some properties like,
+    1. color ----> For link text color
+    2. cursor -----> Used to change cursors on various link states
+    3. outline ---> Used to provide outline for links like border
+*/

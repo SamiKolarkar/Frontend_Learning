@@ -1,0 +1,51 @@
+/*Fonts
+    It allows us to style fonts for the text in the content part of box model.It has various properties like:-
+    1. font-family ------> Allows us to specify the font other than the generic ones which are present on the machine where the browser tries to render the webpage.
+    p {
+        font-family: "Verdana", sans-serif;
+    }
+    If no font found then generic font types can be directly used by browser which can be directly written in the property value as list of comma-separated values.
+    To include the custom font by making download from src can be done using
+    @font-face {
+        src: url();
+        font-family: "my-font";
+    } 
+
+    2. font-style -----> Used to enable (or) disable Italic style for font by providing values like normal, italic and oblique(which enables us using simulated version of italic by slanting the font).
+    p {
+        font-style: italic;
+    }
+    
+    3. font-weight ------> Used to determine the boldness of the font.
+    p {
+        font-weight: bold;
+    }
+    
+    4.  text-decoration -----> Used to decorate text with underlines, etc.
+    p {
+        text-decoration: dashed;
+    }
+
+    5. text-transform -------> Used to transform text like from lowercase to uppercase,etc.
+    p {
+        text-transform: capitalize;
+    }
+
+    6. text-shadows -------> Used to enable shadows on a text content
+    p {
+        text-shadow: 4px 5px 8px red,
+                     1px 4px 3px green;
+    } 
+
+    7. text-align -----> Used to align the text
+    p {
+        text-align:justify;
+    }
+
+    8. line-height -----> To decide the height of the line as well as the font-size gets multiplied with based on the line-height so to adjust according to it.
+    h1 {
+        line-height: 21px;
+    }
+
+    9. letter-spacing & word-spacing
+*/
