@@ -1,0 +1,209 @@
+/*Float
+    This is used to float elements by bringing them out of the normal flow and floating it over the existing content such that the content wraps around the floating element
+
+.cleared {
+    clear:left;
+}
+.box {
+    align-content: center;
+    text-align: center;
+    background-color: aqua;
+    float:left;
+    width: 150px;
+    height: 150px;
+}
+body {
+    background-color: antiquewhite;
+}
+.para {
+    background-color:dodgerblue;
+}
+.wrapper {
+    display: flow-root;
+    background-color: rgb(148 255 172);
+    padding: 10px;
+    color: purple;
+}
+.main{
+    background-color: chartreuse;
+}
+.child {
+    display:inline-block;
+    height:130px;
+    width: 130px;
+    background-color: burlywood;
+}
+*/
+
+
+/*Positioning
+    This allows us to position an element out of the normal flow of the document unlike float here the other remaining contents box are not altered as it is added to another layer.
+
+    1. Static positioning -----> It does not affect anything as by default elements have static positioning property.
+    p {
+        position: static;
+    }
+    
+    2. Relative positioning -----> It is used when we want to move an element with relative to its own original position as browser first places it in normal flow and then positions it by moving.
+    Here elements moves opposite to the expected behaviour.
+    p {
+        position: relative;
+        right: 30px;
+    }
+
+    3. Absolute positioning -------> It is used when we want to separate element completely out of normal flow and add it to another layer.The element is positioned relative to the ancestor blocks position if no ancestor has positioning attribute (as they will be static) then element would be positioned as per the viewport of the machince.
+    p {
+        position: absolute;
+        left: 30px;
+    }
+
+    4. Fixed Positioning -----> It is similar to aboslute positioning and used to fix an element such that it is always fixed at that position whichever part of page you visit it still remains there.
+    It is fixed with relative to the viewport.
+    div {
+        position: fixed;
+    }
+
+    5. Sticky positioning -----> It is an hybrid between relative & fixed as first it allows to move the element to a certain distance as relative & then it becomes fixed.
+    p {
+        position: sticky;
+        top: 10px; -----> This indicates that the element can move with upto 10px and remains relative but after that it becomes fixed.
+    }
+*/
+
+
+/*Z-axis positioning
+    It is used to position elements along the z-axis such that to decide which element must be visible first and which one must be overlapped, as initial elements have default value '0' and assumes the order of their declaration as the order of first visibility.
+    div{
+        display: fixed;
+        z-index:1px;
+    }
+    p{
+        display:relative;
+        top:10px;
+        left:23px;
+        z-index:10px;
+    }
+*/
+
+
+/*Flex Box
+    It is a one-dimensional layout method for arranging items in rows or columns.It has 2 axes main & cross along which flex items are aligned and the display property is added to the parent element.
+    1. flex-direction -----> Used to decide direction to lay flex items along main axis.
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    2. flex-wrap ----> Used to wrap flex items such that if all items are of equal size and overflows the container it wraps around without causing horizontal scroll.
+    section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    3. flex(Shorthand) -----> Used to set the amount of space that an flex item would take along the main axis.
+    .wrapper {
+        display: flex;
+        flex: 1px 100px; -----> This means that it could take from  1px to 100px, but initially would
+                                be set to 100px
+    }
+    The longhand version involves using flex-grow(increasing size), flex-shrink(decreasing size) & flex-basis(for specifying min value)
+
+    4. align-items ----> Used to align flex items across cross axis & an individual behaviour for an element can be applied using align-self.
+    section {
+        dispaly: flex;
+        align-items: center;
+    }
+
+    5. justify-content -----> Used to adjust from where the flex items would be start laying out on the main axis.
+    p {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    To style a specific flex item we use the following strategy,
+    .article:nth-of-type(3) {
+        flex: 10px;
+    }
+*/
+
+
+/*Grid Layout
+    It is a two-dimensional layout method for arranging items in rows and columns. It handles both rows & columns at a time and manages them in the form a grid.
+    .container {
+        display: grid;
+    }
+
+    1. grid-template-rows -----> Used to provide no. of rows & size of each column.
+    .wrapper {
+        display: grid;
+        grid-template-rows: 100px auto ----> Auto means automatic sizing as per remaining space
+    }
+
+    2.grid-template-columns -----> Similar to rows one but for columns.
+    div {
+        display: grid;
+        grid-template-columns: 30px 230px auto;
+    }
+
+    We can additionally use repeat() from CSS to repeat the no. of times for the no. of columns we want as,
+    div {
+        display: grid;
+        grid-template-rows: repeat(3,100px);
+    }
+
+    3. column-gap & row-gap(shorthand 'gap') -----> Used to provide gap between columns and rows.
+    p {
+        display: grid;
+        grid-template-rows: repeat(4, 25px);
+        column-gap: 1px;
+        row-gap: 2px;
+        gap: 3px 2px;
+    }
+
+    4. grid-auto-rows & grid-auto-columns -----> Used to create rows and columns manually sized to override automatic creation using either of grid-template-columns (or) grid-template-rows.
+    div {
+        display: grid;
+        grid-template-rows: repeat(2, 30px);
+        grid-auto-columns: 200px;
+    }
+
+    Additionally, minmax() function can be used to specify min value and size upto certain limit. It can also be combined with repeat() using auto-fit.
+
+    5. grid-column & grid-row (Shorthand for grid-(column/row)-start & grid-(column/row)-end) ----->
+        Used to specify the start and end line for the grid elements listing.
+    div {
+        display: grid;
+        grid-template-rows: 30px 23px;
+        grid-column: 3/1;
+        grid-row: 2/4
+    }
+
+    6. grid-template-areas ---> Used to specify names to our grid design.
+    .container {
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+    }
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: content;
+    }
+    aside {
+        grid-area: sidebar;
+    }
+    footer {
+        grid-area: footer;
+    }
+    The rules for grid-template-areas are as follows:
+        1. You need to have every cell of the grid filled.
+        2. To span across two cells, repeat the name.
+        3. To leave a cell empty, use a . (period).
+        4. Areas must be rectangular — for example, you can't have an L-shaped area.
+        5. Areas can't be repeated in different locations.
+*/

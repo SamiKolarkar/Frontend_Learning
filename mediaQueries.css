@@ -1,0 +1,44 @@
+/*Media Queries
+    It is used to apply CSS rules only when the browser and device environment matches the specfied rules.It also helps us for specifying the design pattern for different types of devices depending on the size of the viewport.
+    Common rule:- 
+    @media media-type and (media-feature-rule) {
+        CSS rules go here 
+    }
+    
+    The media Query types include all, print and screen which decides for which media CSS is going to be applied.
+
+    The various media-feature-rules are created using:
+    1. height & width -----> Used to create rule based on heights & widths of the device and can be prefixed with 'max-' as well as 'min-' for advanced ruling.
+    @media screen and (max-width>=233px) {
+        div{
+            display: grid;
+            grid-template-rows: repeat(2, 100px);
+        }
+    }
+
+    2. orientation ----> Similar to height & width, allows us to test for portrait (or) landscape.
+
+    3. hover ----> Used to test whether the user is using touchscreen, keyboard navigation (or) pointing device for enabling hover.
+    @media screen and (hover: hover) {
+        body:hover {
+        color: white;
+        background: black;
+    }
+
+    4. pointer ----> Similar to hover, but allows more precise testing by providing values like coarse for mouse (or) trackpad, fine for touchscreen & none.
+
+    5. range syntax
+    @media (min-width: 30em) and (max-width: 50em) {}
+                        (or)
+    @media (30em <= width <= 50em) {}
+
+    6. 'and' logic
+    @media screen and (width >= 600px) and (orientation: landscape) {}
+
+    7. 'or' logic
+    @media screen and (width >= 600px), screen and (orientation: landscape) {}
+
+    7. 'not' logic
+    @media not (width >= 600px)
+}
+*/
