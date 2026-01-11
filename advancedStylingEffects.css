@@ -1,0 +1,20 @@
+/*Box Shadows*/
+div {
+    box-shadow: 2px 3px 2px red,
+                3px 4px 2px black;
+}
+
+/*Using Filters*/
+p {
+    filter: blur(10%);
+}
+
+p {
+    filter: grayscale(3%);
+}
+
+/*Using Shapes With Float for wrapping text around in a specific shape*/
+span {
+    float: left;
+    shape-outside: circle(10%);
+}
