@@ -1,0 +1,21 @@
+#Sample {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3px;
+    border-collapse: collapse;
+    border-width: 3px;
+}
+
+table > caption {
+    caption-side:bottom;
+}
+
+tbody tr:nth-child(odd){
+    background-color:darkgray;
+}
+
+tr, th {
+    text-align: center;
+    border-style:solid;
+    border-color: black;
+    padding: 2px;
+}

@@ -1,0 +1,28 @@
+/*Multiple Column Layout
+    It involves creation of multiple columns, allowing data to be in same normal flow.
+    1. column-count ----> Use to specify the no. of columns.
+    
+    2. column-gap ----> Used to specify the gap between 2 columns.
+    
+    3. column-width -----> Used to specify the width of each column
+
+    4. column-rule ----> It involves creating ruling(border) between columns & includes column-rule-style, column-rule-color, column-rule-width.
+
+    5. column-span ----> It is used to span an element across multiple columns & takes all, none as values.
+
+    6. break-inside ----> Used to provide fragmented content in columns continued without breaking between columns if one not fits in a single column then increases the size of page and scrolls downward without breaking it.
+    <div> 
+        <p></p>
+
+        <p></p>
+        
+        <p></p>
+        
+        <p></p>
+    </div>
+    
+    div{ 
+        column-count: 2;
+        break-inside: avoid;
+    }
+*/

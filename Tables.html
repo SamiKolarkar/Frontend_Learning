@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tableStyling.css"/>
 </head>
 <body>
     <h4>The following is the table tag implememtation.</h4>
-    <table border="1" cellspacing="0" cellpadding="10">
-        <caption>Sample table</caption>
-        <colgroup>
+    <table cellspacing="0" cellpadding="10" id="Sample">
+        <caption class="caption styling">Sample table</caption>
+        <colgroup class="colgroup">
             <col span="1"/>
             <col span="1"/>
             <col span="1"/>
@@ -43,6 +44,7 @@
                 <td>Delhi</td>
             </tr>
         </tbody>
+        <tfoot></tfoot>
     </table>
 </body>
 </html>

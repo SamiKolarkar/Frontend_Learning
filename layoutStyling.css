@@ -106,7 +106,7 @@ body {
         flex: 1px 100px; -----> This means that it could take from  1px to 100px, but initially would
                                 be set to 100px
     }
-    The longhand version involves using flex-grow(increasing size), flex-shrink(decreasing size) & flex-basis(for specifying min value)
+    The longhand version involves using flex-grow(increase factor), flex-shrink(decrease factor) & flex-basis(for specifying min value)
 
     4. align-items ----> Used to align flex items across cross axis & an individual behaviour for an element can be applied using align-self.
     section {
@@ -206,4 +206,26 @@ body {
         3. To leave a cell empty, use a . (period).
         4. Areas must be rectangular — for example, you can't have an L-shaped area.
         5. Areas can't be repeated in different locations.
+*/
+
+
+/*Overflow
+    It is a property used to control overflow of contents within a box like text-content moving out of the text-area by default done by CSS to avoid data loss.
+    It has typs like visible(Used to make overflow visible), hidden(Used to hide overflow), scroll(Used to handle overflow by scrolling) & auto(Similar to scroll but browser decides whether to show scrollbars or not).
+    div {  
+        overflow: scroll;
+    }
+    If overflow happens for a word we use word-break (or) overflow-wrap.
+*/
+
+
+/*WordBreak
+    Used to handle overflow when a word is too large for the small container.It breaks the word as per the specified way of handling.
+    p {
+        wordbreak: normal/break-all/keep-all/break-word;
+    }
+*/
+
+
+/*
 */

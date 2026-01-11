@@ -1,0 +1,27 @@
+/*Background Styling
+1. background-color -----> Used to add color to background.
+
+2. background-img:src("")  ------> Used to add image to the background.
+
+3. background-repeat ----> Used to control tiling(filing) behaviour of an image in the background
+
+4. background-size ---> Used to specify size of the background img/Object-fit
+
+5. background-position ----> Used to specify background img position by default starting from 
+   (0,0) & supports keyword, length, percentage values. 
+
+6. Gradient ----> It is an special type of image which transitions between 2 (or) more colors. In 
+   CSS, it is implemented using background-img property which takes values linear-gradient, radial-gradient, conical-gradient, repeating-linear/radial-gradient.
+                  
+7. background-attachment ----> This CSS property sets whether a background image's position is fixed  
+   within the viewport, or scrolls with its containing block.It takes values scroll, fixed & local.
+
+   When we have to use multiple background-imgs, we provide multiple sources in a comma separated manner.
+*/
+
+
+/*Border
+1. border-style ------> Used to specify the type of box border
+
+2. border-color, border-width
+*/
