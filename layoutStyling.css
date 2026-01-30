@@ -118,6 +118,7 @@ body {
     p {
         display: flex;
         justify-content: flex-start;
+    }    justify-content: flex-start;
     }
 
     To style a specific flex item we use the following strategy,

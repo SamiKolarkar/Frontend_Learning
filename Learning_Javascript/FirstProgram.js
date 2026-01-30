@@ -83,3 +83,5 @@ function outer2() {
 }
 let myfunc=outer2();
 myfunc();
+
+console.log(`The value of v is : ${v}`);
