@@ -1,0 +1,23 @@
+{
+  "name": "react_learning",
+  "version": "1.0.0",
+  "description": "This is initial react app...",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "vite",
+    "start": "npx vite",
+    "build": "npx vite build"
+  },
+  "author": "SamiKolarkar",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.3"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.0"
+  }
+}
