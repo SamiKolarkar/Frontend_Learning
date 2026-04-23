@@ -22,15 +22,15 @@ function App() {
   }, [username]);
 
   const repos=async()=>{
-    const details=await fetch("https://api.github.com/users/"+username, {
-          headers: {
-          Authorization: ""
-        }
-      }
-    )
-    details=await details.json();
-    console.log(details);
-    setRepoDetails(details);
+    // const details=await fetch("https://api.github.com/users/"+username, {
+    //       headers: {
+    //       Authorization: ""
+    //     }
+    //   }
+    // )
+    // details=await details.json();
+    // console.log(details);
+    // setRepoDetails(details);
   }
 
   return (

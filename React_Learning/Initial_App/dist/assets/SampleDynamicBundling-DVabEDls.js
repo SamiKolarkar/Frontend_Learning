@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-DAs1UGHr.js";var t=e();function n(){return(0,t.jsx)(t.Fragment,{children:(0,t.jsx)(`div`,{children:(0,t.jsx)(`h3`,{children:`This must be loaded when only needed...(Dynamic Bundling)`})})})}export{n as default};

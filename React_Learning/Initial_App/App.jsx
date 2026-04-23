@@ -2,8 +2,14 @@
 import ReactDOM from "react-dom/client";
 import Sample from "./Sample"
 import SampleRouting from "./SampleRouting";
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
-
+import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import SampleHoc from "./SampleHoc";
+import { useDetails } from "./useDetails";
+import { useContext, useState } from "react";
+import { lazy } from "react";
+import { Suspense } from "react";
+import { Link } from "react-router-dom";
+import { userContext } from "./userContext";
 
 // Redundant - Due to use of JSX
 // const parent=React.createElement(
@@ -25,12 +31,32 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom"
 // </div>)
 
 //React Functional Component - An Function that returns a JSX (or) React Element
+
+//Dynamic-Bundling
+const DynamicBundle=lazy(()=>import("./SampleDynamicBundling"));
+
 const Parent= ()=>{
-    return <div id="parent">
-                <h2 id="child" className="children" style={{
-                    "backgroundColor": "red"
-                }}>This is how nested React elements are created using JSX...</h2>
-            </div>
+    const HigherOrderComponent=SampleHoc(Sample);
+    const {loggedInUser}=useContext(userContext);
+    const [userName, setUserName]=useState(loggedInUser);
+    const [details, setDetails]=useState(null);
+
+    return (
+        <>
+            <userContext.Provider value={{loggedInUser:userName, setUserName}}>
+                <div id="parent">
+                    <label htmlFor="userName">UserName : </label>
+                    <input id="userName" type="text" onChange={(e)=>setUserName(e.target.value)}/>
+                    <button onClick={()=>setDetails(useDetails({name:userName, status:window.navigator.onLine}))}>Update</button>
+                    {details!==null && details}
+                    <h2 id="child" className="children" >This is how nested React elements are created using JSX...</h2>
+                </div>
+                <h3><Link to="/dynamic/bundle">Use Dynamic Bundling</Link></h3>
+                <Outlet />
+                <HigherOrderComponent />
+            </userContext.Provider>
+        </>
+    );
 }
 
 // const root=ReactDOM.createRoot(document.getElementById("root"));
@@ -42,22 +68,49 @@ const Parent= ()=>{
 // root.render(heading);
 
 
+//Sample Routing
+// const appRouter=createBrowserRouter(
+//     [
+//         {
+//             path:"/",
+//             element:<Parent/>
+//         },
+//         {
+//             path:"/hooks",
+//             element:<Sample />
+//         },
+//         {
+//             path:"/routing",
+//             element:<SampleRouting/>
+//         }
+//     ]
+// );
+
+
+//Children Routing 
 const appRouter=createBrowserRouter(
     [
         {
-            path:"/",
-            element:<Parent/>
+            path: "/",
+            element: <Parent/>,
+            children: [
+                {
+                    path: "/hooks",
+                    element: <Sample/>
+                },
+                {
+                    path: "/routing",
+                    element: <SampleRouting/>
+                }
+            ],
+            errorElement: <ErrorPage/>
         },
         {
-            path:"/hooks",
-            element:<Sample />
-        },
-        {
-            path:"/routing",
-            element:<SampleRouting/>
+            path: "/dynamic/bundle",
+            element: <Suspense fallback={<h2>This is fallback from suspense due to dynamic bundling</h2>}><DynamicBundle /></Suspense>
         }
     ]
-);
+)
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter}/>);
